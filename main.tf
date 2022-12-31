@@ -8,6 +8,7 @@ module "vpc" {
 }
 
 module "rabbitmq" {
+  depends_on = [module.vpc]
   source     = "github.com/bjreddy009037/tf-module-rabbitmq"
   COMPONENT  = var.COMPONENT
   ENV        = var.ENV
