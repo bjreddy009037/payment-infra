@@ -12,7 +12,7 @@ module "rabbitmq" {
   source     = "github.com/bjreddy009037/tf-module-rabbitmq"
   COMPONENT  = var.COMPONENT
   ENV        = var.ENV
-  NODE       = var.NODE_TYPE
+  NODE_TYPE  = var.NODE_TYPE
   VPC_ID     = module.vpc.VPC_ID
   VPC_CIDR   = module.vpc.VPC_CIDR
   SUBNET_IDS = module.vpc.SUBNET_IDS
